@@ -1,4 +1,4 @@
-🚀 Prompt Hub
+🚀 Prompt-Hub
 
 Prompt Hub is a collection of powerful and useful AI prompts designed to help users get better responses from AI tools like ChatGPT and other large language models.
 
