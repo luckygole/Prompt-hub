@@ -2,7 +2,7 @@
 
 Prompt Hub is a collection of powerful and useful AI prompts designed to help users get better responses from AI tools like ChatGPT and other large language models.
 
-The goal of this project is to provide a centralized place where developers, creators, and learners can find optimized prompts for productivity, coding, content creation, and problem solving working is that simple
+The goal of this project is to provide a centralized place where developers, creators, and learners can find optimized prompts for productivity, coding, content creation, and problem solving working is that simple. what you think about its animation & frontend
 
 ✨ Features
 
