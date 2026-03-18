@@ -665,15 +665,15 @@ AI Tools <ChevronDown/>
 
 <div className="bp-dropdown-menu">
 
-<a href="https://chat.openai.com" target="_blank" className="bp-dropdown-item">ChatGPT</a>
+<a href="https://chat.openai.com" target="_blank" className="bp-dropdown-item" rel="noreferrer">ChatGPT</a>
 
-<a href="https://gemini.google.com" target="_blank" className="bp-dropdown-item">Gemini</a>
+<a href="https://gemini.google.com" target="_blank" className="bp-dropdown-item" rel="noreferrer">Gemini</a>
 
-<a href="https://claude.ai" target="_blank" className="bp-dropdown-item">Claude</a>
+<a href="https://claude.ai" target="_blank" className="bp-dropdown-item" rel="noreferrer">Claude</a>
 
-<a href="https://www.midjourney.com" target="_blank" className="bp-dropdown-item">Midjourney</a>
+<a href="https://www.midjourney.com" target="_blank" className="bp-dropdown-item" rel="noreferrer">Midjourney</a>
 
-<a href="https://stability.ai" target="_blank" className="bp-dropdown-item">Stable Diffusion</a>
+<a href="https://stability.ai" target="_blank" className="bp-dropdown-item" rel="noreferrer">Stable Diffusion</a>
 
 </div>
 

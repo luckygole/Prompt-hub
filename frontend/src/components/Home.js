@@ -460,6 +460,8 @@ const Home = () => {
     setShowModal(false);
   };
 
+  console.log(videoLoaded);
+
 
 
   return (
