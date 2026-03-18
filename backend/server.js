@@ -312,18 +312,38 @@ app.get('/api/prompts', async (req, res) => {
   }
 });
 
+// app.post('/api/prompts', async (req, res) => {
+//   try {
+//     console.log('📤 Saving:', req.body.title);
+//     const prompt = new Prompt(req.body);
+//     await prompt.save();
+//     console.log('✅ Saved:', prompt._id);
+//     res.status(201).json(prompt);
+//   } catch (error) {
+//     console.error('❌ Save error:', error);
+//     res.status(400).json({ error: error.message });
+//   }
+// });
 app.post('/api/prompts', async (req, res) => {
   try {
     console.log('📤 Saving:', req.body.title);
-    const prompt = new Prompt(req.body);
+
+    const data = req.body;
+    delete data._id;   // 🔥 important fix
+
+    const prompt = new Prompt(data);
     await prompt.save();
+
     console.log('✅ Saved:', prompt._id);
     res.status(201).json(prompt);
+    console.log(req.body);
   } catch (error) {
     console.error('❌ Save error:', error);
     res.status(400).json({ error: error.message });
   }
 });
+
+
 
 // ✅ FIXED LIKE ENDPOINT - PATCH + Auth
 app.patch('/api/prompts/:id/like', async (req, res) => {
