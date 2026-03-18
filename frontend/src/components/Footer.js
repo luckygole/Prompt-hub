@@ -120,6 +120,176 @@
 // export default Footer;
 
 
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import { useAuth } from "../contexts/AuthContext";
+
+// const Footer = () => {
+//   const { isAuthenticated } = useAuth();
+
+//   return (
+//     <footer
+//       style={{
+//         background: "#05060a",
+//         padding: "80px 40px 30px",
+//         color: "rgba(255,255,255,0.8)",
+//         borderTop: "1px solid rgba(255,255,255,0.08)",
+//         fontFamily: "Inter, sans-serif",
+//       }}
+//     >
+//       <div
+//         style={{
+//           maxWidth: "1300px",
+//           margin: "0 auto",
+//           display: "grid",
+//           gridTemplateColumns: "2fr 1fr 1fr 1fr",
+//           gap: "60px",
+//         }}
+//       >
+//         {/* Logo Section */}
+//         <div>
+//           <div
+//             style={{
+//               display: "flex",
+//               alignItems: "center",
+//               gap: "10px",
+//               marginBottom: "15px",
+//             }}
+//           >
+//             <div
+//               style={{
+//                 width: "38px",
+//                 height: "38px",
+//                 borderRadius: "10px",
+//                 background: "linear-gradient(135deg,#a855f7,#ec4899)",
+//                 display: "flex",
+//                 alignItems: "center",
+//                 justifyContent: "center",
+//                 fontSize: "18px",
+//               }}
+//             >
+//               🍌
+//             </div>
+
+//             <h2 style={{ fontSize: "20px", fontWeight: "700", color: "white" }}>
+//               PromptHub
+//             </h2>
+//           </div>
+
+//           <p style={{ color: "rgba(255,255,255,0.55)", lineHeight: "1.6" }}>
+//             Discover quality prompts for AI tools and content creation.
+//           </p>
+//         </div>
+
+//         {/* Resources */}
+//         <div>
+//           <h4
+//             style={{
+//               color: "white",
+//               marginBottom: "18px",
+//               fontWeight: "600",
+//               fontSize: "14px",
+//               letterSpacing: "1px",
+//             }}
+//           >
+//             RESOURCES
+//           </h4>
+
+//           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+//             <a href="/blog" style={linkStyle}>
+//               Blog
+//             </a>
+//             <a href="/changelog" style={linkStyle}>
+//               Changelog
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* Company */}
+//         <div>
+//           <h4
+//             style={{
+//               color: "white",
+//               marginBottom: "18px",
+//               fontWeight: "600",
+//               fontSize: "14px",
+//               letterSpacing: "1px",
+//             }}
+//           >
+//             COMPANY
+//           </h4>
+
+//           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+//             <Link to="/" style={linkStyle}>
+//               Home
+//             </Link>
+
+//             {isAuthenticated && (
+//               <Link to="/favorites" style={linkStyle}>
+//                 Favorites
+//               </Link>
+//             )}
+//           </div>
+//         </div>
+
+//         {/* Legal */}
+//         <div>
+//           <h4
+//             style={{
+//               color: "white",
+//               marginBottom: "18px",
+//               fontWeight: "600",
+//               fontSize: "14px",
+//               letterSpacing: "1px",
+//             }}
+//           >
+//             LEGAL
+//           </h4>
+
+//           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+//             <a href="/privacy" style={linkStyle}>
+//               Privacy Policy
+//             </a>
+//             <a href="/terms" style={linkStyle}>
+//               Terms of Service
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Bottom Footer */}
+//       <div
+//         style={{
+//           marginTop: "70px",
+//           borderTop: "1px solid rgba(255,255,255,0.07)",
+//           paddingTop: "20px",
+//           display: "flex",
+//           justifyContent: "space-between",
+//           flexWrap: "wrap",
+//           maxWidth: "1300px",
+//           marginLeft: "auto",
+//           marginRight: "auto",
+//           fontSize: "14px",
+//           color: "rgba(255,255,255,0.5)",
+//         }}
+//       >
+//         <div>© {new Date().getFullYear()} PromptHub All Rights Reserved.</div>
+
+//         <div>Created by Lucky Gole ❤️</div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// const linkStyle = {
+//   color: "rgba(255,255,255,0.6)",
+//   textDecoration: "none",
+//   fontSize: "14px",
+//   transition: "0.3s",
+// };
+
+// export default Footer;
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
@@ -183,43 +353,23 @@ const Footer = () => {
 
         {/* Resources */}
         <div>
-          <h4
-            style={{
-              color: "white",
-              marginBottom: "18px",
-              fontWeight: "600",
-              fontSize: "14px",
-              letterSpacing: "1px",
-            }}
-          >
-            RESOURCES
-          </h4>
+          <h4 style={headingStyle}>RESOURCES</h4>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <a href="#" style={linkStyle}>
+          <div style={columnStyle}>
+            <Link to="/blog" style={linkStyle}>
               Blog
-            </a>
-            <a href="#" style={linkStyle}>
+            </Link>
+            <Link to="/changelog" style={linkStyle}>
               Changelog
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Company */}
         <div>
-          <h4
-            style={{
-              color: "white",
-              marginBottom: "18px",
-              fontWeight: "600",
-              fontSize: "14px",
-              letterSpacing: "1px",
-            }}
-          >
-            COMPANY
-          </h4>
+          <h4 style={headingStyle}>COMPANY</h4>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div style={columnStyle}>
             <Link to="/" style={linkStyle}>
               Home
             </Link>
@@ -234,51 +384,41 @@ const Footer = () => {
 
         {/* Legal */}
         <div>
-          <h4
-            style={{
-              color: "white",
-              marginBottom: "18px",
-              fontWeight: "600",
-              fontSize: "14px",
-              letterSpacing: "1px",
-            }}
-          >
-            LEGAL
-          </h4>
+          <h4 style={headingStyle}>LEGAL</h4>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <a href="#" style={linkStyle}>
+          <div style={columnStyle}>
+            <Link to="/privacy" style={linkStyle}>
               Privacy Policy
-            </a>
-            <a href="#" style={linkStyle}>
+            </Link>
+            <Link to="/terms" style={linkStyle}>
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div
-        style={{
-          marginTop: "70px",
-          borderTop: "1px solid rgba(255,255,255,0.07)",
-          paddingTop: "20px",
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          maxWidth: "1300px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          fontSize: "14px",
-          color: "rgba(255,255,255,0.5)",
-        }}
-      >
+      <div style={bottomStyle}>
         <div>© {new Date().getFullYear()} PromptHub All Rights Reserved.</div>
-
         <div>Created by Lucky Gole ❤️</div>
       </div>
     </footer>
   );
+};
+
+// 🔥 Reusable Styles
+const headingStyle = {
+  color: "white",
+  marginBottom: "18px",
+  fontWeight: "600",
+  fontSize: "14px",
+  letterSpacing: "1px",
+};
+
+const columnStyle = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "12px",
 };
 
 const linkStyle = {
@@ -286,6 +426,20 @@ const linkStyle = {
   textDecoration: "none",
   fontSize: "14px",
   transition: "0.3s",
+};
+
+const bottomStyle = {
+  marginTop: "70px",
+  borderTop: "1px solid rgba(255,255,255,0.07)",
+  paddingTop: "20px",
+  display: "flex",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+  maxWidth: "1300px",
+  marginLeft: "auto",
+  marginRight: "auto",
+  fontSize: "14px",
+  color: "rgba(255,255,255,0.5)",
 };
 
 export default Footer;
