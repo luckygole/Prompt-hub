@@ -472,7 +472,8 @@ const Home = () => {
       <section style={{
         position: 'relative',
         height: '100vh',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        width: '100%',
       }}>
         {/* Background video */}
         <video
@@ -480,7 +481,7 @@ const Home = () => {
           style={{
             position: 'absolute', inset: 0,
             width: '100%', height: '100%',
-            objectFit: 'cover', opacity: 0.18
+            objectFit: 'cover', opacity: 0.18 , pointerEvents:'none'  
           }}
           onLoadedData={() => setVideoLoaded(true)}
         >

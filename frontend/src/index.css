@@ -54,17 +54,7 @@ body {
   /* background: linear-gradient(135deg, #0f0f23 0%, #1a0f2e 50%, #0f0f23 100%); */
   color: white;
   min-height: 100vh;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 50;
-  /* z-index: 50;
-  background: rgba(0,0,0,0.2);
-  backdrop-filter: blur(10px); */
-  /* border-bottom: 1px solid rgba(255,255,255,0.1); */
+  overflow-x: hidden;
 }
 
 .container {
