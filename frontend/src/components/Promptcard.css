@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  0%   { transform: scale(0.7); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes toastOut {
+  from { opacity: 1; }
+  to   { opacity: 0; transform: translateY(-8px) scale(0.9); }
+}
+
+/* Card */
+.bp-card {
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: transform 0.35s, box-shadow 0.35s;
+  position: relative;
+  animation: fadeUp 0.45s ease both;
+  max-width: 500px;
+  width: 100%;
+  background: #111;
+}
+
+.bp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 52px rgba(0,0,0,0.65);
+}
+
+/* Image */
+.bp-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background: #1e1e24;
+  overflow: hidden;
+}
+
+.bp-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.55s ease;
+}
+
+.bp-card:hover .bp-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Gradient */
+.bp-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.04) 0%,
+    rgba(0,0,0,0.08) 35%,
+    rgba(0,0,0,0.62) 62%,
+    rgba(0,0,0,0.90) 100%
+  );
+  z-index: 1;
+}
+
+/* Badge */
+.bp-badge {
+  font-family: 'Syne', sans-serif;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  padding: 5px 11px;
+  border-radius: 7px;
+  border: 1px solid rgba(255,255,255,0.13);
+  z-index: 3;
+}
+
+/* Heart */
+.bp-heart-btn {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  z-index: 3;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bp-heart-btn:hover {
+  transform: scale(1.12);
+}
+
+.bp-heart-icon {
+  font-size: 1rem;
+}
+
+.bp-like-count {
+  font-size: 0.58rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Overlay */
+.bp-overlay-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 14px;
+}
+
+/* Text */
+.bp-prompt-text {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.bp-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.bp-btn {
+  flex: 1;
+  padding: 9px 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bp-btn-copy {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.bp-btn-create {
+  background: #fff;
+  color: #111;
+}
+
+/* Toast */
+.bp-toast {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  padding: 11px 20px;
+  border-radius: 12px;
+  color: #fff;
+  z-index: 99999;
+}

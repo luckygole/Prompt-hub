@@ -79,19 +79,21 @@
 
 import React, { useEffect, useState } from "react";
 import "./PromptsPage.css";
+import { backendURL } from "../helper";
 
 const PromptsPage = () => {
 
 const [prompts,setPrompts] = useState([]);
 const [search,setSearch] = useState("");
 
-useEffect(()=>{
 
-fetch("http://localhost:5000/api/prompts")
-.then(res=>res.json())
-.then(data=>setPrompts(data))
-
-},[])
+useEffect(() => {
+  fetch(`${backendURL}/api/prompts`)
+    .then(res => res.json())
+    .then(data => {
+      setPrompts(data); // ✅ correct
+    });
+}, []);
 
 const filtered = prompts.filter(p =>
 p.prompt.toLowerCase().includes(search.toLowerCase())
