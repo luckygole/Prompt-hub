@@ -1,0 +1,32 @@
+
+# for only backend service:
+# services:
+#   backend:
+#     build: ./backend
+#     ports:
+#       - "5000:5000"
+#     env_file:
+#       - ./backend/.env
+
+
+  # frontend:
+  #   build: ./frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    
