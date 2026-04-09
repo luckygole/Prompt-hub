@@ -108,7 +108,9 @@ Lucky Gole
 
 📬 Connect
 🌐 Portfolio https://portfolio-2026-ten-gamma.vercel.app/
+
 📧 golelaksh@gmail.com
+
 💼 LinkedIn https://www.linkedin.com/in/luckygole/
 📄 License
 
